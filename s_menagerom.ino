@@ -13,12 +13,12 @@ void setup() {
     state[i] = LOW;
     pinMode(adresa[i], OUTPUT);
   }
-  interval[0] =  100000;
-  interval[1] =  200000;  
-  interval[2] =  160000;  
-  interval[3] =  300000;  
-  interval[4] =  500000;    
-  interval[5] =  190000;  
+  interval[0] =  100;
+  interval[1] =  800;  
+  interval[2] =  5000;  
+  interval[3] =  10000;  
+  interval[4] =  25000;    
+  interval[5] =  190000; 
 
 taskid_t task0 = taskManager.scheduleFixedRate(interval[0], [] {
 		if (state[0] == LOW)
